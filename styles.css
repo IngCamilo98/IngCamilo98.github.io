@@ -266,3 +266,84 @@ html{
     right: -15px;
     font-size: 14px;
 }
+Se agregaran con javascript
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript{
+    0%{width: 0%;}
+    100%{width: 75%}
+}
+.skills .skill .java{
+    width: 0%;
+    animation: 2s java forwards;
+}
+@keyframes java{
+    0%{width: 0%;}
+    100%{width: 75%}
+}
+.skills .skill .nodejs{
+    width: 0%;
+    animation: 2s nodejs forwards;
+}
+@keyframes nodejs{
+    0%{width: 0%;}
+    100%{width: 75%}
+}
+.skills .skill .servidoreslinux{
+    width: 0%;
+    animation: 2s servidoreslinux forwards;
+}
+@keyframes servidoreslinux{
+    0%{width: 0%;}
+    100%{width: 75%}
+}
+.skills .skill .git{
+    width: 0%;
+    animation: 2s git forwards;
+}
+@keyframes git{
+    0%{width: 0%;}
+    100%{width: 75%}
+}
+.skills .skill .resiliencia{
+    width: 0%;
+    animation: 2s resiliencia forwards;
+}
+@keyframes resiliencia{
+    0%{width: 0%;}
+    100%{width: 75%}
+}
+.skills .skill .liderazgo{
+    width: 0%;
+    animation: 2s liderazgo forwards;
+}
+@keyframes liderazgo{
+    0%{width: 0%;}
+    100%{width: 75%}
+}
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion{
+    0%{width: 0%;}
+    100%{width: 75%}
+}
+.skills .skill .trabajoenequipo{
+    width: 0%;
+    animation: 2s trabajoenequipo forwards;
+}
+@keyframes trabajoenequipo{
+    0%{width: 0%;}
+    100%{width: 75%}
+}
+.skills .skill .disciplina{
+    width: 0%;
+    animation: 2s disciplina forwards;
+}
+@keyframes disciplina{
+    0%{width: 0%;}
+    100%{width: 75%}
+}
