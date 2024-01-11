@@ -21,6 +21,10 @@
       align-items: center;
       max-width: 100%;
     }
+
+    #imprimir-btn {
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -33,6 +37,7 @@
   <div id="qr-container" style="display: none;">
     <h2>Código QR generado:</h2>
     <div id="qr-code"></div>
+    <button id="imprimir-btn" onclick="imprimirQR()">Imprimir Código QR</button>
   </div>
 
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
@@ -52,6 +57,10 @@
       } else {
         alert('Ingrese un identificador válido.');
       }
+    }
+
+    function imprimirQR() {
+      window.print();
     }
   </script>
 </body>
