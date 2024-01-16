@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -21,26 +22,6 @@
       align-items: center;
       max-width: 100%;
     }
-
-    #generar-qr-btn {
-      margin-top: 10px;
-    }
-
-    #imprimir-btn {
-      margin-top: 10px;
-    }
-
-    @media print {
-      body * {
-        visibility: hidden;
-      }
-      #qr-container, #qr-container * {
-        visibility: visible;
-      }
-      #generar-qr-btn {
-        display: none;
-      }
-    }
   </style>
 </head>
 <body>
@@ -48,12 +29,11 @@
   
   <label for="identificador">Ingrese el identificador:</label>
   <input type="text" id="identificador" placeholder="20009-TI--24-00022">
-  <button id="generar-qr-btn" onclick="generarQR()">Generar Código QR</button>
+  <button onclick="generarQR()">Generar Código QR</button>
 
   <div id="qr-container" style="display: none;">
-    <p id="identificador-imprimir"></p>
+    <h2>Código QR generado:</h2>
     <div id="qr-code"></div>
-    <button id="imprimir-btn" onclick="imprimirQR()">Imprimir Código QR</button>
   </div>
 
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
@@ -62,7 +42,6 @@
       const identificador = document.getElementById('identificador').value.trim();
       const qrContainer = document.getElementById('qr-container');
       const qrCodeContainer = document.getElementById('qr-code');
-      const identificadorImprimir = document.getElementById('identificador-imprimir');
 
       if (identificador !== '') {
         const enlaceBase = 'https://softexpert.permoda.co/se/v58515/workflow/workflow_data.php?workflowId=';
@@ -71,16 +50,9 @@
         qrContainer.style.display = 'block';
         qrCodeContainer.innerHTML = ''; // Limpiar contenido anterior
         new QRCode(qrCodeContainer, enlaceCompleto);
-
-        // Mostrar el identificador
-        identificadorImprimir.textContent = identificador;
       } else {
         alert('Ingrese un identificador válido.');
       }
-    }
-
-    function imprimirQR() {
-      window.print();
     }
   </script>
 </body>
